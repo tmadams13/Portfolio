@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickContacts | Tyler Adams Portfolio</title>
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* Screenshot styling */
+    #screenshots img {
+      width: 70%;
+      height: auto;
+      margin: 1em auto;
+      display: block;
+      cursor: zoom-in;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    #screenshots img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    /* Simple nav link back */
+    nav a {
+      font-size: 1rem;
+      color: #0077cc;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>QuickContacts</h1>
+    <nav>
+      <a href="../index.html">← Back to Portfolio Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+       QuickContacts is a lightweight software tool for efficiently organizing and managing professional contacts, especially for those in research. It provides an intuitive interface for adding, editing, and searching contact information.
+      </p>
+    </section>
+
+    <section id="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Simple interface</li>
+        <li>Add, edit, delete, and search contacts </li>
+        <li>Search and filter contact information</li>
+        <li>Export and import contacts to spreadsheet</li>
+      </ul>
+    </section>
+
+    <section id="screenshots">
+      <h2>Screenshots</h2>
+      <a href="#img1"><img src="../images/QuickContacts_Records.png" alt="QuickContacts Screenshot 1" /></a>
+      <a href="#img2"><img src="../images/QuickContacts_Advanced.png" alt="QuickContacts Screenshot 2" /></a>
+      <a href="#img3"><img src="../images/QuickContacts_Update.png" alt="QuickContacts Screenshot 2" /></a>
+
+      <!-- Lightbox full-size views -->
+      <div id="img1" class="lightbox">
+        <a href="#screenshots"><img src="../images/QuickContacts_Records.png" alt="QuickContacts Screenshot 1 Full" /></a>
+      </div>
+      <div id="img2" class="lightbox">
+        <a href="#screenshots"><img src="../images/QuickContacts_Advanced.png" alt="QuickContacts Screenshot 2 Full" /></a>
+      </div>
+      <div id="img3" class="lightbox">
+        <a href="#screenshots"><img src="../images/QuickContacts_Update.png" alt="QuickContacts Screenshot 2 Full" /></a>
+      </div>
+    </section>
+
+    <section id="download">
+      <h2>Access</h2>
+      <p><a href="https://github.com/tmadams13/QuickContacts" target="_blank">QuickContacts repository</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tyler Adams</p>
+  </footer>
+</body>
+</html>

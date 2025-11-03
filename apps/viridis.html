@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viridis | Tyler Adams Portfolio</title>
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* Screenshot styling */
+    #screenshots img {
+      width: 70%;
+      height: auto;
+      margin: 1em auto;
+      display: block;
+      cursor: zoom-in;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    #screenshots img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    /* Simple nav link back */
+    nav a {
+      font-size: 1rem;
+      color: #0077cc;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Viridis</h1>
+    <nav>
+      <a href="../index.html">← Back to Portfolio Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+        Viridis is an automated software system for ecological and agricultural monitoring, designed to process LiDAR LAS files and shapefiles to extract vegetation features using custom or preset environmental parameters. With its intuitive interface, users can easily visualize and analyze data, concentrating on interpretation rather than manual tasks.
+      </p>
+    </section>
+
+    <section id="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Intuitive, user-friendly interface for easy 3D visualizations of LiDAR data</li>
+        <li>Automated processing and feature extraction</li>
+        <li>Custom or preset environmental parameters</li>
+        <li>Streamlined reporting of binned and plot-level data</li>
+        <li>In-program data visualization</li>
+      </ul>
+    </section>
+
+    <section id="screenshots">
+      <h2>Screenshots</h2>
+      <a href="#img1"><img src="../images/GUI_Overview_Screenshot.png" alt="Viridis Screenshot 1" /></a>
+      <a href="#img2"><img src="../images/GUI_Windows_Screenshot.png" alt="Viridis Screenshot 2" /></a>
+
+      <!-- Lightbox full-size views -->
+      <div id="img1" class="lightbox">
+        <a href="#screenshots"><img src="../images/GUI_Overview_Screenshot.png" alt="Viridis Screenshot 1 Full" /></a>
+      </div>
+      <div id="img2" class="lightbox">
+        <a href="#screenshots"><img src="../images/GUI_Windows_Screenshot.png" alt="Viridis Screenshot 2 Full" /></a>
+      </div>
+    </section>
+
+    <section id="download">
+      <h2>Access</h2>
+      <p><a href="https://earthmetricsgeospatial.com" target="_blank">EarthMetrics Software Solutions homepage</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tyler Adams</p>
+  </footer>
+</body>
+</html>
+
